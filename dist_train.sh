@@ -1,7 +1,7 @@
 
 !/usr/bin/env bash
 
-CONFIG=config_week/week.py
+CONFIG=config_day/day.py
 GPUS=8
 PORT=${PORT:-29508}
 PYTHONPATH="$(dirname $0)/..":$PYTHONPATH \

@@ -10,8 +10,8 @@ classes = ['human', 'bicycle', 'motorcycle', 'vehicle']
 
 data_root = os.path.join(sys.path[0], 'data/')
 
-images_path = os.path.join(data_root, 'train', 'Train', 'Week')
-labels_path = os.path.join(data_root, 'labels', 'Train', 'Week')
+images_path = os.path.join(data_root, 'train', 'Train', 'Day')
+labels_path = os.path.join(data_root, 'labels', 'Train', 'Day')
 
 dst_images_path = os.path.join(data_root, "images")
 dst_labels_path = os.path.join(data_root, "txts")

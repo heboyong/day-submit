@@ -1,4 +1,4 @@
-# ECCV'22 ChaLearn Seasons in Drift Challenge (track 2: Week level)
+# ECCV'22 ChaLearn Seasons in Drift Challenge (track 1: Day level)
 
 
 ## 1. Enviroment
@@ -33,7 +33,7 @@ pip install tqdm
 
 # 3. data pross
 
-Notice: We only use 30% labels to train our model.
+
 
 （1）Place the training set in the `data/train` folder and unzip it.
 
@@ -44,17 +44,17 @@ Notice: We only use 30% labels to train our model.
 （4) Run dataprocess: `sh data_process.sh`
 
 # 4. training models
-Notice: We use 8*3090 GPU to train our models. If GPU numbers not equal8, we should simply change the learning rate.
-For examole: If 4 GPUs are used, change the learning rate 0.00001/2 in `config_week/week.py` line 404.
+Notice: We use 8*3090 GPU to train our models. If GPU numbers not equal 8, we should simply change the learning rate.
+For examole: If 4 GPUs are used, change the learning rate 0.02/2 in `config_day/day.py` .
 
 Before training, pre-trained weights on coco dataset should download unzip, and put it in `weights` folder
 
 ```shell
-wget https://github.com/CBNetwork/storage/releases/download/v1.0.0/cascade_mask_rcnn_cbv2_swin_small_patch4_window7_mstrain_400-1400_adamw_3x_coco.pth.zip
+wget https://github.com/CBNetwork/storage/releases/download/v1.0.0/cascade_rcnn_cbv2d1_r2_101_mdconv_fpn_20e_fp16_ms400-1400_giou_4conv1f_coco_swa.pth.zip
 
-mv https://github.com/CBNetwork/storage/releases/download/v1.0.0/cascade_mask_rcnn_cbv2_swin_small_patch4_window7_mstrain_400-1400_adamw_3x_coco.pth.zip weights/
+mv cascade_rcnn_cbv2d1_r2_101_mdconv_fpn_20e_fp16_ms400-1400_giou_4conv1f_coco_swa.pth.zip weights/
 
-unzip cascade_mask_rcnn_cbv2_swin_small_patch4_window7_mstrain_400-1400_adamw_3x_coco.pth.zip
+unzip cascade_rcnn_cbv2d1_r2_101_mdconv_fpn_20e_fp16_ms400-1400_giou_4conv1f_coco_swa.pth.zip
 
 sh dist_train.sh
 ```
