@@ -55,8 +55,8 @@ def main_json():
         '''
 
         for score, label, box in zip(scores_list, labels_list, boxes_list):
-            if (label == 0 and score >= 0.95) or (label == 1 and score >= 0.5) or (
-                    label == 2 and score >= 0.1) or (label == 3 and score >= 0.97):
+            if (label == 0 and score >= 0.95) or (label == 1 and score >= 0.3) or (
+                    label == 2 and score >= 0.1) or (label == 3 and score >= 0.95):
 
                 out_labels.append(label)
                 out_bboxes.append(box)
