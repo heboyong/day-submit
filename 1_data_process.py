@@ -214,4 +214,4 @@ if __name__ == '__main__':
     process_images_labels()
     txt_2_xmls()
     xml_2_json()
-    #process_test_images()
+    process_test_images()
